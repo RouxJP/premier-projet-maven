@@ -7,6 +7,12 @@
   <version>1.0-SNAPSHOT</version>
   <url>http://www.example.com</url>
   <build>
+    <resources>
+      <resource>
+        <filtering>true</filtering>
+        <directory>src/main/resources</directory>
+      </resource>
+    </resources>
     <finalName>${project.artifactId}</finalName>
     <pluginManagement>
       <plugins>
@@ -74,6 +80,20 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <mode>DEV</mode>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <mode>PROD</mode>
+      </properties>
+    </profile>
+  </profiles>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -89,6 +109,7 @@
     </dependency>
   </dependencies>
   <properties>
+    <mode>DEV</mode>
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
