@@ -16,16 +16,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+     <!-- TODO : création d’une propriété dont le nom est junit.version et la valeur  4.11 --> 
+     <junit.version>4.11</junit.version>
+
+</properties>
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+		<!-- TODO Réutilisation de la propriété junit.version. -->
+		<version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+	</dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -71,5 +75,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
+	<finalName>${project.artifactId}</finalName>
   </build>
 </project>
