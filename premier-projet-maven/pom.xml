@@ -19,7 +19,7 @@
      <!-- TODO : création d’une propriété dont le nom est junit.version et la valeur  4.11 --> 
      <junit.version>4.11</junit.version>
 
-</properties>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -29,6 +29,12 @@
 		<version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    	<dependency>
+		<groupId>com.github.lalyos</groupId>
+		<artifactId>jfiglet</artifactId>
+		<version>0.0.3</version>
+	</dependency>
+    
 	</dependencies>
 
   <build>
