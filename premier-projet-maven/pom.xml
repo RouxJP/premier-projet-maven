@@ -15,7 +15,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
      <!-- TODO : création d’une propriété dont le nom est junit.version et la valeur  4.11 --> 
-     <junit.version>4.11</junit.version>
+     <junit.version>4.13.1</junit.version>
    	<!-- Création d’une propriété mode avec la valeur DEV. -->
      <mode>DEV</mode>
   </properties>
